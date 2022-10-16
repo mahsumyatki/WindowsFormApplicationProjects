@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LanguageCourseManagementProject
 {
-    public partial class Registeration : Form
+    public partial class Registration : Form
     {
-        public Registeration()
+        public Registration()
         {
             InitializeComponent();
         }
