@@ -46,22 +46,88 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CourseManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CourseManagement.Designer.cs">
+      <DependentUpon>CourseManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoursePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoursePrint.Designer.cs">
+      <DependentUpon>CoursePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseRegistration.Designer.cs">
+      <DependentUpon>CourseRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointManagement.Designer.cs">
+      <DependentUpon>PointManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointPrint.Designer.cs">
+      <DependentUpon>PointPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointRegistrationcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointRegistrationcs.Designer.cs">
+      <DependentUpon>PointRegistrationcs.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registeration.cs">
+    <Compile Include="StudentManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registeration.Designer.cs">
-      <DependentUpon>Registeration.cs</DependentUpon>
+    <Compile Include="StudentManagement.Designer.cs">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="StudentPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentPrint.Designer.cs">
+      <DependentUpon>StudentPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentRegistration.Designer.cs">
+      <DependentUpon>StudentRegistration.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CourseManagement.resx">
+      <DependentUpon>CourseManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoursePrint.resx">
+      <DependentUpon>CoursePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseRegistration.resx">
+      <DependentUpon>CourseRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointManagement.resx">
+      <DependentUpon>PointManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointPrint.resx">
+      <DependentUpon>PointPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointRegistrationcs.resx">
+      <DependentUpon>PointRegistrationcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -72,8 +138,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Registeration.resx">
-      <DependentUpon>Registeration.cs</DependentUpon>
+    <EmbeddedResource Include="StudentManagement.resx">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentPrint.resx">
+      <DependentUpon>StudentPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentRegistration.resx">
+      <DependentUpon>StudentRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
