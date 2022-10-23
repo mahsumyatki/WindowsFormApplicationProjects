@@ -13,7 +13,7 @@ namespace LanguageCourseManagementProject
 {
     public partial class StudentRegistration : Form
     {
-        public StudentRegistration()
+        public StudentRegistration() 
         {
             InitializeComponent();
         }
@@ -64,6 +64,7 @@ namespace LanguageCourseManagementProject
                     MessageBox.Show("Öğrenci Başarıyla Eklendi.");
                     connection.Close();
                     ListStudent();
+                    CleanTextbox();
                 }
                 catch (Exception ex)
                 {
@@ -77,5 +78,27 @@ namespace LanguageCourseManagementProject
         {
             ListStudent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CleanTextbox();
+        }
+
+        private void CleanTextbox()
+        {
+            textBox_studentName.Text = "";
+            textBox_studentPhone.Text = "";
+            textBox_studentImage.Text = "";
+            comboBox_studentGender.Text = "";
+            textBox_studentAddress.Text = "";
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            HomePage homePage = new HomePage();
+            homePage.Show();
+            this.Hide();
+        }
+            
     }
 }

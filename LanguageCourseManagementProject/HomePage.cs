@@ -66,12 +66,16 @@ namespace LanguageCourseManagementProject
 
         private void button_studentRegistration_Click(object sender, EventArgs e)
         {
-            HideMenu();
+            StudentRegistration studentRegistration = new StudentRegistration();
+            studentRegistration.Show();
+            this.Hide();
         }
 
         private void button_studentManagement_Click(object sender, EventArgs e)
         {
-            HideMenu();
+            StudentManagement studentManagement = new StudentManagement();
+            studentManagement.Show();
+            this.Hide();
         }
 
         private void button_studentContent_Click(object sender, EventArgs e)
@@ -81,7 +85,9 @@ namespace LanguageCourseManagementProject
 
         private void button_studentPrint_Click(object sender, EventArgs e)
         {
-            HideMenu();
+            StudentPrint studentPrint = new StudentPrint();
+            studentPrint.Show();
+            this.Hide();
         }
 
         private void button_course_Click(object sender, EventArgs e)
@@ -91,17 +97,23 @@ namespace LanguageCourseManagementProject
 
         private void button_courseRegistration_Click(object sender, EventArgs e)
         {
-            HideMenu();
+            CourseRegistration courseRegistration = new CourseRegistration();
+            courseRegistration.Show();
+            this.Hide();
         }
 
         private void button_courseManagement_Click(object sender, EventArgs e)
         {
-            HideMenu();
+            CourseManagement courseManagement = new CourseManagement();
+            courseManagement.Show();
+            this.Hide();
         }
 
         private void button_coursePrint_Click(object sender, EventArgs e)
         {
-            HideMenu();
+            CoursePrint coursePrint = new CoursePrint();
+            coursePrint.Show();
+            this.Hide();
         }
 
         private void button_point_Click(object sender, EventArgs e)

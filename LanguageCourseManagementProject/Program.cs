@@ -16,7 +16,7 @@ namespace LanguageCourseManagementProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentRegistration());
+            Application.Run(new HomePage());
         }
     }
 }
