@@ -33,15 +33,16 @@ namespace LanguageCourseManagementProject
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button_add = new System.Windows.Forms.Button();
+            this.button_reset = new System.Windows.Forms.Button();
+            this.textBox_description = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_hour = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBox_name = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -66,11 +67,11 @@ namespace LanguageCourseManagementProject
             this.label6.Size = new System.Drawing.Size(188, 38);
             this.label6.TabIndex = 8;
             this.label6.Text = "KURS KAYIT";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -79,37 +80,50 @@ namespace LanguageCourseManagementProject
             this.panel1.Size = new System.Drawing.Size(1061, 71);
             this.panel1.TabIndex = 28;
             // 
-            // button2
+            // pictureBox2
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkCyan;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(849, 542);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(158, 36);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "EKLE";
-            this.button2.UseVisualStyleBackColor = false;
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(958, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 68);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
-            // button3
+            // button_add
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkOrange;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(672, 542);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(158, 36);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "RESET";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button_add.BackColor = System.Drawing.Color.DarkCyan;
+            this.button_add.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_add.ForeColor = System.Drawing.Color.White;
+            this.button_add.Location = new System.Drawing.Point(849, 542);
+            this.button_add.Name = "button_add";
+            this.button_add.Size = new System.Drawing.Size(158, 36);
+            this.button_add.TabIndex = 27;
+            this.button_add.Text = "EKLE";
+            this.button_add.UseVisualStyleBackColor = false;
+            this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
-            // textBox3
+            // button_reset
             // 
-            this.textBox3.Location = new System.Drawing.Point(139, 509);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(170, 69);
-            this.textBox3.TabIndex = 25;
+            this.button_reset.BackColor = System.Drawing.Color.DarkOrange;
+            this.button_reset.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_reset.ForeColor = System.Drawing.Color.White;
+            this.button_reset.Location = new System.Drawing.Point(672, 542);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(158, 36);
+            this.button_reset.TabIndex = 26;
+            this.button_reset.Text = "RESET";
+            this.button_reset.UseVisualStyleBackColor = false;
+            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
+            // 
+            // textBox_description
+            // 
+            this.textBox_description.Location = new System.Drawing.Point(139, 509);
+            this.textBox_description.Multiline = true;
+            this.textBox_description.Name = "textBox_description";
+            this.textBox_description.Size = new System.Drawing.Size(170, 69);
+            this.textBox_description.TabIndex = 25;
             // 
             // label3
             // 
@@ -122,12 +136,12 @@ namespace LanguageCourseManagementProject
             this.label3.TabIndex = 24;
             this.label3.Text = "Açıklama :";
             // 
-            // textBox2
+            // textBox_hour
             // 
-            this.textBox2.Location = new System.Drawing.Point(139, 475);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 20);
-            this.textBox2.TabIndex = 25;
+            this.textBox_hour.Location = new System.Drawing.Point(139, 475);
+            this.textBox_hour.Name = "textBox_hour";
+            this.textBox_hour.Size = new System.Drawing.Size(170, 20);
+            this.textBox_hour.TabIndex = 25;
             // 
             // label2
             // 
@@ -151,23 +165,24 @@ namespace LanguageCourseManagementProject
             this.label1.TabIndex = 24;
             this.label1.Text = "Kurs Adı :";
             // 
-            // textBox1
+            // textBox_name
             // 
-            this.textBox1.Location = new System.Drawing.Point(139, 440);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 25;
+            this.textBox_name.Location = new System.Drawing.Point(139, 440);
+            this.textBox_name.Name = "textBox_name";
+            this.textBox_name.Size = new System.Drawing.Size(170, 20);
+            this.textBox_name.TabIndex = 25;
             // 
-            // pictureBox2
+            // label8
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(958, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 68);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(12, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 37);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "<<<";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // CourseRegistration
             // 
@@ -176,12 +191,12 @@ namespace LanguageCourseManagementProject
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1061, 598);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button_reset);
+            this.Controls.Add(this.button_add);
+            this.Controls.Add(this.textBox_description);
+            this.Controls.Add(this.textBox_hour);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -189,6 +204,7 @@ namespace LanguageCourseManagementProject
             this.Name = "CourseRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CourseRegistration";
+            this.Load += new System.EventHandler(this.CourseRegistration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -203,14 +219,15 @@ namespace LanguageCourseManagementProject
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button_add;
+        private System.Windows.Forms.Button button_reset;
+        private System.Windows.Forms.TextBox textBox_description;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_hour;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label8;
     }
 }
