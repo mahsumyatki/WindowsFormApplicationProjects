@@ -40,7 +40,7 @@ namespace LanguageCourseManagementProject
         private void button5_Click(object sender, EventArgs e)
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("SELECT * FROM COURSE WHERE CourseName like'%" + textBox_filter.Text + "%'", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM COURSE WHERE COURSENAME like'%" + textBox_filter.Text + "%'", connection);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
             DataSet dataSet = new DataSet();
             sqlDataAdapter.Fill(dataSet);
@@ -72,7 +72,7 @@ namespace LanguageCourseManagementProject
             dataGridView1.DrawToBitmap(objBmp, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
             e.Graphics.DrawImage(objBmp, 20, 150);
             e.Graphics.DrawString(label1.Text, new Font("Verdana", 20, FontStyle.Bold), Brushes.Black, new Point(300, 30));
-            this.dataGridView1.Columns["CourseId"].Visible = false;
+            this.dataGridView1.Columns["COURSEID"].Visible = false;
         }
     }
 }

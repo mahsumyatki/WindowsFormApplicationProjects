@@ -61,7 +61,7 @@ namespace LanguageCourseManagementProject
                 {
                     studentKey = Convert.ToInt32(dataGridView_studentList.SelectedRows[0].Cells[0].Value.ToString());
                     connection.Open();
-                    string query = "DELETE FROM STUDENT WHERE StudentId=" +studentKey;
+                    string query = "DELETE FROM STUDENT WHERE STUDENTID=" +studentKey;
 
                     SqlCommand command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
@@ -105,9 +105,9 @@ namespace LanguageCourseManagementProject
                 {
                     studentKey = Convert.ToInt32(dataGridView_studentList.SelectedRows[0].Cells[0].Value.ToString());
                     connection.Open();
-                    string query = "UPDATE STUDENT SET NameSurname='"+textBox_nameSurname.Text+"',Phone='"+textBox_phone.Text+
-                        "',DateOfBirth='"+dateTimePicker_birthday.Text+"',Gender='"+comboBox_gender.Text+"',Image='"+textBox_image.Text+
-                        "',Address='"+textBox_address.Text+"' WHERE StudentId="+studentKey;
+                    string query = "UPDATE STUDENT SET NAMESURNAME='"+textBox_nameSurname.Text+"',PHONE='"+textBox_phone.Text+
+                        "',BIRTHDAY='"+dateTimePicker_birthday.Text+"',GENDER='"+comboBox_gender.Text+"',IMAGE='"+textBox_image.Text+
+                        "',ADDRESS='"+textBox_address.Text+"' WHERE STUDENTID="+studentKey;
 
                     SqlCommand command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
@@ -139,7 +139,7 @@ namespace LanguageCourseManagementProject
         private void button_search_Click(object sender, EventArgs e)
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("SELECT * FROM STUDENT WHERE NameSurname like'%"+textBox_filter.Text+"%'",connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM STUDENT WHERE NAMESURNAME like'%"+textBox_filter.Text+"%'",connection);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
             DataSet dataSet = new DataSet();
             sqlDataAdapter.Fill(dataSet);

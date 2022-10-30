@@ -123,37 +123,30 @@ namespace LanguageCourseManagementProject
 
         private void button_pointRegistration_Click(object sender, EventArgs e)
         {
-            HideMenu();
+            PointRegistration pointRegistration = new PointRegistration();
+            pointRegistration.Show();
+            this.Hide();
         }
 
         private void button_pointManagement_Click(object sender, EventArgs e)
         {
-            HideMenu();
+            PointManagement pointManagement = new PointManagement();
+            pointManagement.Show();
+            this.Hide();
         }
 
         private void button_pointPrint_Click(object sender, EventArgs e)
         {
-            HideMenu();
+            PointPrint pointPrint = new PointPrint();
+            pointPrint.Show();
+            this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button_signout_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
         }
     }
 }

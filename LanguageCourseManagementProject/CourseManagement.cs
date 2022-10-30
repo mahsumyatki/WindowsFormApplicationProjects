@@ -68,12 +68,12 @@ namespace LanguageCourseManagementProject
                 {
                     courseKey = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
                     connection.Open();
-                    string query = "UPDATE COURSE SET CourseName='" + textBox_name.Text + "',CourseHour='" + textBox_hour.Text +
-                        "',Description='" + textBox_description.Text + "' WHERE CourseId=" + courseKey;
+                    string query = "UPDATE COURSE SET COURSENAME='" + textBox_name.Text + "',COURSEHOUR='" + textBox_hour.Text +
+                        "',COURSEDESCRIPTION='" + textBox_description.Text + "' WHERE COURSEID=" + courseKey;
 
                     SqlCommand command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Öğrenci Başarıyla Güncellendi.");
+                    MessageBox.Show("Kurs Başarıyla Güncellendi.");
                     connection.Close();
                     ListCourse();
                     CleanTextbox();
@@ -90,7 +90,7 @@ namespace LanguageCourseManagementProject
         {
             if (textBox_name.Text == "" || textBox_hour.Text == "" || textBox_description.Text == "")
             {
-                MessageBox.Show("Silinecek öğrenciyi seçiniz...");
+                MessageBox.Show("Silinecek kursu seçiniz...");
             }
             else
             {
@@ -98,7 +98,7 @@ namespace LanguageCourseManagementProject
                 {
                     courseKey = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
                     connection.Open();
-                    string query = "DELETE FROM COURSE WHERE CourseId=" + courseKey;
+                    string query = "DELETE FROM COURSE WHERE COURSEID=" + courseKey;
 
                     SqlCommand command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
@@ -118,7 +118,7 @@ namespace LanguageCourseManagementProject
         private void button_search_Click(object sender, EventArgs e)
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("SELECT * FROM COURSE WHERE CourseName like'%" + textBox_filter.Text + "%'", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM COURSE WHERE COURSENAME like'%" + textBox_filter.Text + "%'", connection);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
             DataSet dataSet = new DataSet();
             sqlDataAdapter.Fill(dataSet);

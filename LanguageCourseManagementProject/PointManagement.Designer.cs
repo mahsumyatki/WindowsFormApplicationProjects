@@ -30,30 +30,34 @@ namespace LanguageCourseManagementProject
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button_refresh = new System.Windows.Forms.Button();
+            this.button_search = new System.Windows.Forms.Button();
+            this.textBox_filter = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button_reset = new System.Windows.Forms.Button();
+            this.button_update = new System.Windows.Forms.Button();
+            this.button_delete = new System.Windows.Forms.Button();
+            this.dataGridView_pointList = new System.Windows.Forms.DataGridView();
+            this.comboBox_course = new System.Windows.Forms.ComboBox();
+            this.textBox_description = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_point = new System.Windows.Forms.TextBox();
+            this.textBox_studentId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pointList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.button_refresh);
+            this.panel1.Controls.Add(this.button_search);
+            this.panel1.Controls.Add(this.textBox_filter);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -61,77 +65,124 @@ namespace LanguageCourseManagementProject
             this.panel1.Size = new System.Drawing.Size(1061, 74);
             this.panel1.TabIndex = 49;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(12, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 37);
+            this.label8.TabIndex = 50;
+            this.label8.Text = "<<<";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // button_refresh
+            // 
+            this.button_refresh.BackColor = System.Drawing.Color.DarkOrange;
+            this.button_refresh.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_refresh.ForeColor = System.Drawing.Color.White;
+            this.button_refresh.Location = new System.Drawing.Point(931, 20);
+            this.button_refresh.Name = "button_refresh";
+            this.button_refresh.Size = new System.Drawing.Size(118, 38);
+            this.button_refresh.TabIndex = 20;
+            this.button_refresh.Text = "YENİLE";
+            this.button_refresh.UseVisualStyleBackColor = false;
+            this.button_refresh.Click += new System.EventHandler(this.button_refresh_Click);
+            // 
+            // button_search
+            // 
+            this.button_search.BackColor = System.Drawing.Color.DarkOrange;
+            this.button_search.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_search.ForeColor = System.Drawing.Color.White;
+            this.button_search.Location = new System.Drawing.Point(841, 19);
+            this.button_search.Name = "button_search";
+            this.button_search.Size = new System.Drawing.Size(84, 38);
+            this.button_search.TabIndex = 20;
+            this.button_search.Text = "ARA";
+            this.button_search.UseVisualStyleBackColor = false;
+            this.button_search.Click += new System.EventHandler(this.button_search_Click);
+            // 
+            // textBox_filter
+            // 
+            this.textBox_filter.Location = new System.Drawing.Point(657, 29);
+            this.textBox_filter.Name = "textBox_filter";
+            this.textBox_filter.Size = new System.Drawing.Size(178, 20);
+            this.textBox_filter.TabIndex = 19;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(393, 17);
+            this.label6.Location = new System.Drawing.Point(320, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(260, 38);
             this.label6.TabIndex = 8;
             this.label6.Text = "PUAN YÖNETİMİ";
             // 
-            // button4
+            // button_reset
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkOrange;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(563, 554);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(158, 36);
-            this.button4.TabIndex = 39;
-            this.button4.Text = "RESET";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button_reset.BackColor = System.Drawing.Color.DarkOrange;
+            this.button_reset.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_reset.ForeColor = System.Drawing.Color.White;
+            this.button_reset.Location = new System.Drawing.Point(563, 554);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(158, 36);
+            this.button_reset.TabIndex = 39;
+            this.button_reset.Text = "RESET";
+            this.button_reset.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // button_update
             // 
-            this.button3.BackColor = System.Drawing.Color.OrangeRed;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(727, 554);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(158, 36);
-            this.button3.TabIndex = 40;
-            this.button3.Text = "GÜNCELLE";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button_update.BackColor = System.Drawing.Color.OrangeRed;
+            this.button_update.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_update.ForeColor = System.Drawing.Color.White;
+            this.button_update.Location = new System.Drawing.Point(727, 554);
+            this.button_update.Name = "button_update";
+            this.button_update.Size = new System.Drawing.Size(158, 36);
+            this.button_update.TabIndex = 40;
+            this.button_update.Text = "GÜNCELLE";
+            this.button_update.UseVisualStyleBackColor = false;
+            this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
-            // button2
+            // button_delete
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkCyan;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(891, 554);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(158, 36);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "SİL";
-            this.button2.UseVisualStyleBackColor = false;
+            this.button_delete.BackColor = System.Drawing.Color.DarkCyan;
+            this.button_delete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_delete.ForeColor = System.Drawing.Color.White;
+            this.button_delete.Location = new System.Drawing.Point(891, 554);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(158, 36);
+            this.button_delete.TabIndex = 41;
+            this.button_delete.Text = "SİL";
+            this.button_delete.UseVisualStyleBackColor = false;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
-            // dataGridView1
+            // dataGridView_pointList
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkGray;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 72);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 349);
-            this.dataGridView1.TabIndex = 42;
+            this.dataGridView_pointList.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.dataGridView_pointList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_pointList.Location = new System.Drawing.Point(223, 72);
+            this.dataGridView_pointList.Name = "dataGridView_pointList";
+            this.dataGridView_pointList.Size = new System.Drawing.Size(581, 349);
+            this.dataGridView_pointList.TabIndex = 42;
             // 
-            // comboBox1
+            // comboBox_course
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(135, 488);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 21);
-            this.comboBox1.TabIndex = 47;
+            this.comboBox_course.FormattingEnabled = true;
+            this.comboBox_course.Location = new System.Drawing.Point(135, 488);
+            this.comboBox_course.Name = "comboBox_course";
+            this.comboBox_course.Size = new System.Drawing.Size(170, 21);
+            this.comboBox_course.TabIndex = 47;
             // 
-            // textBox3
+            // textBox_description
             // 
-            this.textBox3.Location = new System.Drawing.Point(135, 521);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(170, 69);
-            this.textBox3.TabIndex = 44;
+            this.textBox_description.Location = new System.Drawing.Point(135, 521);
+            this.textBox_description.Multiline = true;
+            this.textBox_description.Name = "textBox_description";
+            this.textBox_description.Size = new System.Drawing.Size(170, 69);
+            this.textBox_description.TabIndex = 44;
             // 
             // label3
             // 
@@ -144,19 +195,19 @@ namespace LanguageCourseManagementProject
             this.label3.TabIndex = 40;
             this.label3.Text = "Açıklama :";
             // 
-            // textBox2
+            // textBox_point
             // 
-            this.textBox2.Location = new System.Drawing.Point(520, 453);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 20);
-            this.textBox2.TabIndex = 45;
+            this.textBox_point.Location = new System.Drawing.Point(520, 453);
+            this.textBox_point.Name = "textBox_point";
+            this.textBox_point.Size = new System.Drawing.Size(170, 20);
+            this.textBox_point.TabIndex = 45;
             // 
-            // textBox1
+            // textBox_studentId
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 452);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 46;
+            this.textBox_studentId.Location = new System.Drawing.Point(135, 452);
+            this.textBox_studentId.Name = "textBox_studentId";
+            this.textBox_studentId.Size = new System.Drawing.Size(170, 20);
+            this.textBox_studentId.TabIndex = 46;
             // 
             // label2
             // 
@@ -191,51 +242,33 @@ namespace LanguageCourseManagementProject
             this.label1.TabIndex = 43;
             this.label1.Text = "Öğrenci Id :";
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.DarkOrange;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(965, 17);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 38);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "ARA";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(781, 27);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 20);
-            this.textBox4.TabIndex = 19;
-            // 
             // PointManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1061, 598);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_course);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox_description);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button_reset);
+            this.Controls.Add(this.textBox_point);
+            this.Controls.Add(this.button_update);
+            this.Controls.Add(this.textBox_studentId);
+            this.Controls.Add(this.button_delete);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView_pointList);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PointManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PointManagement";
+            this.Load += new System.EventHandler(this.PointManagement_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pointList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,19 +278,21 @@ namespace LanguageCourseManagementProject
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button_reset;
+        private System.Windows.Forms.Button button_update;
+        private System.Windows.Forms.Button button_delete;
+        private System.Windows.Forms.DataGridView dataGridView_pointList;
+        private System.Windows.Forms.ComboBox comboBox_course;
+        private System.Windows.Forms.TextBox textBox_description;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_point;
+        private System.Windows.Forms.TextBox textBox_studentId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button_search;
+        private System.Windows.Forms.TextBox textBox_filter;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button_refresh;
     }
 }

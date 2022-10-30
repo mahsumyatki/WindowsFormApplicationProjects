@@ -25,20 +25,14 @@ namespace LanguageCourseManagementProject
 
         private void StudentList()
         {
-            connection.Open();
-            string query = "SELECT * FROM STUDENT";
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, connection);
-            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
-            var dataset = new DataSet();
-            sqlDataAdapter.Fill(dataset);
-            dataGridView_studentList.DataSource = dataset.Tables[0];
-            connection.Close();
+            MainClass mainClass = new MainClass();
+            mainClass.ListStudent(dataGridView_studentList);
         }
 
         private void button_search_Click(object sender, EventArgs e)
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("SELECT * FROM STUDENT WHERE NameSurname like'%" + textBox_filter.Text + "%'", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM STUDENT WHERE NAMESURNAME like'%" + textBox_filter.Text + "%'", connection);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
             DataSet dataSet = new DataSet();
             sqlDataAdapter.Fill(dataSet);
@@ -70,7 +64,7 @@ namespace LanguageCourseManagementProject
             dataGridView_studentList.DrawToBitmap(objBmp, new Rectangle(0, 0, this.dataGridView_studentList.Width, this.dataGridView_studentList.Height));
             e.Graphics.DrawImage(objBmp, 20, 150);
             e.Graphics.DrawString(label1.Text, new Font("Verdana",20, FontStyle.Bold),Brushes.Black,new Point(300,30));
-            this.dataGridView_studentList.Columns["StudentId"].Visible = false;
+            this.dataGridView_studentList.Columns["STUDENTID"].Visible = false;
         }
     }
 }

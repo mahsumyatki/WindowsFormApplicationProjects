@@ -70,6 +70,13 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainClass.cs" />
     <Compile Include="PointManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +89,11 @@
     <Compile Include="PointPrint.Designer.cs">
       <DependentUpon>PointPrint.cs</DependentUpon>
     </Compile>
-    <Compile Include="PointRegistrationcs.cs">
+    <Compile Include="PointRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PointRegistrationcs.Designer.cs">
-      <DependentUpon>PointRegistrationcs.cs</DependentUpon>
+    <Compile Include="PointRegistration.Designer.cs">
+      <DependentUpon>PointRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,14 +127,17 @@
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PointManagement.resx">
       <DependentUpon>PointManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PointPrint.resx">
       <DependentUpon>PointPrint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PointRegistrationcs.resx">
-      <DependentUpon>PointRegistrationcs.cs</DependentUpon>
+    <EmbeddedResource Include="PointRegistration.resx">
+      <DependentUpon>PointRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

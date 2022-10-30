@@ -53,11 +53,6 @@ namespace LanguageCourseManagementProject
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -71,7 +66,6 @@ namespace LanguageCourseManagementProject
             this.panel_logo.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -109,6 +103,7 @@ namespace LanguageCourseManagementProject
             this.button_signout.Text = "Çıkış";
             this.button_signout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_signout.UseVisualStyleBackColor = true;
+            this.button_signout.Click += new System.EventHandler(this.button_signout_Click);
             // 
             // panel_pointMenu
             // 
@@ -370,7 +365,6 @@ namespace LanguageCourseManagementProject
             this.label1.Size = new System.Drawing.Size(116, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hoşgeldiniz";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -382,7 +376,6 @@ namespace LanguageCourseManagementProject
             this.label2.Size = new System.Drawing.Size(67, 56);
             this.label2.TabIndex = 1;
             this.label2.Text = "A";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
@@ -410,73 +403,11 @@ namespace LanguageCourseManagementProject
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel5.Controls.Add(this.comboBox1);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.label4);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 515);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(896, 65);
             this.panel5.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(735, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 21);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(102, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 21);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Erkek : ";
-            this.label6.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(6, 36);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 21);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Kadın : ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(675, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 21);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Kurslar";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(6, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 21);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Toplam Öğrenci :";
             // 
             // panel4
             // 
@@ -562,8 +493,6 @@ namespace LanguageCourseManagementProject
             this.panel_logo.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -599,12 +528,7 @@ namespace LanguageCourseManagementProject
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
